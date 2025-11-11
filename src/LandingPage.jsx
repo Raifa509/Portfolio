@@ -1,25 +1,27 @@
 import React from 'react'
 import TextType from './TextType'
 import GradientText from './GradientText'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
 function LandingPage() {
     return (
         <>
             <div className="grid grid-cols-2 text-white h-screen">
                 <div className="flex flex-col mt-50 text-center text-white ms-32">
-                    <h1 className="text-3xl font-light tracking-wide text-gray-300">
+                    <h1 className="text-3xl font-light tracking-wide text-gray-300 tektur-font">
                         Hi 👋, I'm
-                    </h1>                   
+                    </h1>
                     <GradientText
                         colors={["#e879f9", "#a78bfa", "#22d3ee", "#a78bfa", "#e879f9"]}
                         animationSpeed={3}
                         showBorder={false}
-                        className="custom-class text-6xl leading-20 font-extrabold"
+                        className="custom-class text-6xl leading-20 font-extrabold tektur-font"
                     >
                         Fathimathul Raifa NP
                     </GradientText>
 
-                    <div className="mt-2 text-2xl font-medium tracking-wide  text-gray-300">
+                    <div className="mt-2 text-2xl font-medium tracking-wide  text-gray-300 tektur-font">
                         <TextType
                             text={["Full-Stack Developer", "Frontend Developer", "Backend Developer"]}
                             typingSpeed={120}
@@ -28,6 +30,10 @@ function LandingPage() {
                             showCursor={true}
                             cursorCharacter="_"
                         />
+                    </div>
+                    <div className='px-5 py-2 mt-10 flex items-center justify-center'>
+                        <h1 className=''>Resume</h1>
+                        
                     </div>
                 </div>
 

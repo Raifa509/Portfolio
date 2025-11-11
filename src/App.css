@@ -1,11 +1,16 @@
 :root {
   --font-header: "Nova Square", sans-serif;
+  --font-landing: "Tektur", sans-serif
 }
 
 .nova-font{
   font-family: var(--font-header);
-  color: #c6dbff;
+  color: #5491e0;
   
+}
+
+.tektur-font{
+  font-family: var(--font-landing);
 }
 
 
