@@ -1,6 +1,6 @@
 import React from 'react'
-import TextType from './TextType'
-import GradientText from './GradientText'
+import TextType from './Components/TextType'
+import GradientText from './Components/GradientText'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { faDownload, faEnvelope, faEnvelopeOpen } from '@fortawesome/free-solid-svg-icons'

@@ -1,7 +1,8 @@
 import './App.css'
+import Particles from './Components/Particles';
 import Header from './Header';
 import LandingPage from './LandingPage';
-import Particles from './Particles';
+
 
 function App() {
 
