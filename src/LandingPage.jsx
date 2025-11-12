@@ -40,7 +40,7 @@ function LandingPage() {
                                     relative inline-flex items-center justify-center
                                     px-5 py-2.5 rounded-lg font-semibold
                                     text-white tracking-wide
-                                    bg-linear-to-r from-indigo-700 via-fuchsia-600 to-pink-400
+                                    bg-linear-to-r from-indigo-700 to-cyan-400 
                                     shadow-[0_0_12px_rgba(139,92,246,0.4)]
                                     hover:shadow-[0_0_16px_rgba(139,92,246,0.6)]
                                     transition-all duration-300 hover:scale-110 
