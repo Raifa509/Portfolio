@@ -13,12 +13,13 @@
   font-family: var(--font-landing);
 }
 
-
+/* particles-bg */
 .particles-container {
   position: relative;
   width: 100%;
   height: 100%;
 }
+
 
 .text-type {
   display: inline-block;
@@ -103,3 +104,28 @@
   color: transparent;
   animation: gradient linear infinite;
 }
+
+@keyframes icon-bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-bounce-delay-1 {
+  animation: icon-bounce 3s ease-in-out infinite;
+  animation-delay: 0s;
+}
+
+.animate-bounce-delay-2 {
+  animation: icon-bounce 3s ease-in-out infinite;
+  animation-delay: 0.4s;
+}
+
+.animate-bounce-delay-3 {
+  animation: icon-bounce 3s ease-in-out infinite;
+  animation-delay: 0.8s;
+}
+
