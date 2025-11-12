@@ -1,3 +1,4 @@
+import About from './About';
 import './App.css'
 import Particles from './Components/Particles';
 import Header from './Header';
@@ -10,7 +11,7 @@ function App() {
   return (
     <>
       <Header />
-      <div className="bg-gray-950 h-164 w-full relative overflow-hidden">
+      <div className="bg-gray-950 w-full relative overflow-hidden">
         {/* Background particles */}
         <div className="absolute inset-0 z-0">
           <Particles
@@ -30,7 +31,7 @@ function App() {
           <LandingPage />
         </div>
       </div>
-
+      <About />
 
     </>
   )

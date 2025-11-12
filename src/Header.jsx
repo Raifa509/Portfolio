@@ -25,28 +25,28 @@ function Header() {
       >
         <a
           href="#home"
-          className="text-white text-2xl font-semibold transition-transform duration-300 transform hover:scale-105 hover:text-cyan-300"
+          className="text-white text-xl font-semibold transition-transform duration-300 transform hover:scale-105 hover:text-cyan-300"
           onClick={() => setModal(false)}
         ><FontAwesomeIcon icon={faHome} className='me-2' />
           Home
         </a>
         <a
           href="#about"
-          className="text-white text-2xl font-semibold transition-transform duration-300 transform hover:scale-105 hover:text-cyan-300"
+          className="text-white text-xl font-semibold transition-transform duration-300 transform hover:scale-105 hover:text-cyan-300"
           onClick={() => setModal(false)}
         ><FontAwesomeIcon icon={faInfoCircle} className='me-2' />
           About
         </a>
         <a
           href="#projects"
-          className="text-white text-2xl font-semibold transition-transform duration-300 transform hover:scale-105 hover:text-cyan-300"
+          className="text-white text-xl font-semibold transition-transform duration-300 transform hover:scale-105 hover:text-cyan-300"
           onClick={() => setModal(false)}
         ><FontAwesomeIcon icon={faFolderOpen} className='me-2' />
           Projects
         </a>
         <a
           href="#skills"
-          className="text-white text-2xl font-semibold transition-transform duration-300 transform hover:scale-105 hover:text-cyan-300"
+          className="text-white text-xl font-semibold transition-transform duration-300 transform hover:scale-105 hover:text-cyan-300"
           onClick={() => setModal(false)}
         ><FontAwesomeIcon icon={faCode} className='me-2' />
           Skills
@@ -54,7 +54,7 @@ function Header() {
         
         <a
           href="#contact"
-          className="text-white text-2xl font-semibold transition-transform duration-300 transform hover:scale-105 hover:text-cyan-300"
+          className="text-white text-xl font-semibold transition-transform duration-300 transform hover:scale-105 hover:text-cyan-300"
           onClick={() => setModal(false)}
         ><FontAwesomeIcon icon={faEnvelope} className='me-2' />
           Contact

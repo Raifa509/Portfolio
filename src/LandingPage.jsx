@@ -9,7 +9,7 @@ function LandingPage() {
     return (
         <>
             <div className="grid grid-cols-1 md:grid-cols-2 text-white md:min-h-screen mt-15 md:mt-0">
-                <div className="order-2 md:order-1 flex flex-col -mt-10 md:mt-50 text-center text-white md:ms-32">
+                <div className="order-2 md:order-1 flex flex-col mt-10 md:mt-50 text-center text-white md:ms-32">
                     <h1 className="md:text-3xl text-2xl font-light tracking-wide text-gray-300 tektur-font">
                         Hi 👋, I'm
                     </h1>
@@ -92,7 +92,7 @@ function LandingPage() {
                     <div className="relative md:w-[400px] w-[300px] h-[300px] md:h-[400px] rounded-full md:-mt-20">
 
                         <div className="absolute inset-0 rounded-full p-[3px] animate-glow-gradient">
-                            <div className="w-full h-full rounded-full bg-linear-to-br from-violet-600 blur-[6px] opacity-70"></div>
+                            <div className="w-full h-full rounded-full bg-linear-to-br from-cyan-300 to-violet-400 blur-[6px] opacity-70"></div>
                         </div>
                         {/* Image container */}
                         <div className="relative w-full h-full rounded-full overflow-hidden">
