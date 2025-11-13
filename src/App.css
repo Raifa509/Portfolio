@@ -2,6 +2,9 @@
   --font-header: "Nova Square", sans-serif;
   --font-landing: "Tektur", sans-serif
 }
+html {
+  scroll-behavior: smooth;
+}
 
 .nova-font{
   font-family: var(--font-header);

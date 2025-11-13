@@ -10,7 +10,7 @@ function App() {
 
   return (
     <>
-      <Header />
+      
       <div className="bg-gray-950 w-full relative overflow-hidden">
         {/* Background particles */}
         <div className="absolute inset-0 z-0">
@@ -28,6 +28,7 @@ function App() {
 
         {/* Overlayed content */}
         <div className="relative z-10  min-h-screen">
+          <Header />
           <LandingPage />
         </div>
       </div>
