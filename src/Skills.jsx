@@ -1,5 +1,7 @@
 import React from "react";
 import TiltedCard from "./Components/TiltedCard";
+import { motion } from "framer-motion";
+
 
 function Skills() {
   const skills = [

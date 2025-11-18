@@ -1,4 +1,4 @@
-import React from "react";
+import { motion } from "framer-motion";
 
 function About() {
   const softSkills = [
@@ -10,12 +10,22 @@ function About() {
   ];
 
   return (
-    <div id="about" className="min-h-screen bg-gray-950 md:pt-20 px-6 md:px-20 text-white flex flex-col items-center">
+    <div
+      id="about"
+      className="min-h-screen bg-gray-950 md:pt-20 px-6 md:px-20 text-white flex flex-col items-center"
+    >
       <div className="flex flex-col md:grid md:grid-cols-2 bg-gray-900/60 backdrop-blur-lg rounded-2xl shadow-[0_0_25px_rgba(56,189,248,0.25)] md:mx-32 p-10 gap-10 border border-cyan-500/10">
 
-        <div className="order-2 md:order-1 flex items-center justify-center mt-12 md:mt-0">
+        {/* Image */}
+        <motion.div
+          className="order-2 md:order-1 flex items-center justify-center mt-12 md:mt-0"
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+        >
           <div className="relative h-64 w-64 md:h-80 md:w-80 border-2 border-cyan-300 rounded-2xl shadow-[0_0_20px_#22d3ee]">
-            <div className="order-2 md:order-1 absolute h-64 w-64 md:h-80 md:w-80 left-5 bottom-5 overflow-hidden rounded-2xl">
+            <div className="absolute h-64 w-64 md:h-80 md:w-80 left-5 bottom-5 overflow-hidden rounded-2xl">
               <img
                 src="/Raifa.jpg"
                 alt="Raifa"
@@ -23,10 +33,16 @@ function About() {
               />
             </div>
           </div>
-        </div>
+        </motion.div>
 
-       
-        <div className="flex flex-col justify-center text-gray-300 leading-relaxed order-1 md:order-2 text-justify">
+        {/* Text */}
+        <motion.div
+          className="flex flex-col justify-center text-gray-300 leading-relaxed order-1 md:order-2 text-justify"
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+        >
           <h2 className="text-3xl md:text-4xl font-bold text-cyan-300 tektur-font mb-6 text-center md:text-left">
             About Me
           </h2>
@@ -50,17 +66,29 @@ function About() {
             Soft Skills
           </h3>
 
-          <div className="flex flex-wrap gap-3">
+          <motion.div
+            className="flex flex-wrap gap-3"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={{
+              visible: { transition: { staggerChildren: 0.2 } },
+            }}
+          >
             {softSkills.map((skill, index) => (
-              <span
+              <motion.span
                 key={index}
                 className="px-4 py-2 bg-gray-800/80 text-cyan-300 font-medium rounded-full border border-cyan-500/30 shadow-[0_0_10px_rgba(56,189,248,0.3)] hover:scale-105 transition-all duration-300"
+                variants={{
+                  hidden: { opacity: 0, y: 10 },
+                  visible: { opacity: 1, y: 0 },
+                }}
               >
                 {skill}
-              </span>
+              </motion.span>
             ))}
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
     </div>
   );

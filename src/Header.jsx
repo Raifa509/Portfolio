@@ -1,5 +1,6 @@
 import { faBars, faBriefcase, faCode, faEnvelope, faFolderOpen, faHome, faInfoCircle, faPaperPlane, faPhone } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { motion } from 'framer-motion'
 import React, { useState } from 'react'
 
 function Header() {
@@ -7,10 +8,13 @@ function Header() {
 
   return (
     <>
-      <div className='h-10 bg-gray-950 text-cyan-300 flex items-center justify-between tektur-font md:py-12 py-10 md:px-15 px-6 md:text-[25px] text-[20px] md:tracking-[-1px]'>
+      <motion.div initial={{opacity:0}}
+      animate={{opacity:100}}
+      transition={{duration:3,ease: "easeOut"}}
+       className='h-10 bg-gray-950 text-cyan-300 flex items-center justify-between tektur-font md:py-12 py-10 md:px-15 px-6 md:text-[25px] text-[20px] md:tracking-[-1px]'>
         <h1>Raifa<FontAwesomeIcon icon={faCode} className='ms-1' /></h1>
         <FontAwesomeIcon icon={faBars} onClick={() => setModal(!modal)} />
-      </div>
+      </motion.div>
 
       <div
         className={`

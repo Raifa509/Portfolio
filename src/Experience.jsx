@@ -65,7 +65,7 @@ export default function ScrollTimeline() {
                     : "opacity-0 translate-y-10"
                 } ${isLeft ? "md:mr-auto md:text-right" : "md:ml-auto md:text-left"}`}
               >
-                <div className="bg-gray-900/60 backdrop-blur-lg p-6 rounded-xl shadow-lg relative">
+                <div className="bg-gray-900/60 backdrop-blur-lg hover:shadow-[0_0_30px_rgba(56,189,248,0.4)] transition-shadow duration-500 p-6 rounded-xl shadow-lg relative">
                   {/* Timeline circle (hidden on small screens) */}
                   <span
                     className={`hidden md:block absolute top-1/2 w-4 h-4 bg-cyan-400 rounded-full border-2 border-gray-950 -translate-y-1/2 ${

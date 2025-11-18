@@ -4,12 +4,15 @@ import GradientText from './Components/GradientText'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { faDownload, faEnvelope, faEnvelopeOpen } from '@fortawesome/free-solid-svg-icons'
+import { motion } from "framer-motion";
 
 function LandingPage() {
     return (
         <>
             <div className="grid grid-cols-1 md:grid-cols-2 text-white md:min-h-screen mt-27 md:mt-0">
-                <div className="order-2 md:order-1 flex flex-col mt-10 md:mt-50 text-center text-white md:ms-32">
+                <motion.div initial={{ opacity: 0, x: -100 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 2, ease: "easeOut" }} className="order-2 md:order-1 flex flex-col mt-10 md:mt-50 text-center text-white md:ms-32">
                     <h1 className="md:text-3xl text-2xl font-light tracking-wide text-gray-300 tektur-font">
                         Hi , I'm
                     </h1>
@@ -32,6 +35,8 @@ function LandingPage() {
                             cursorCharacter="_"
                         />
                     </div>
+
+
                     <div className='px-5 py-2 mt-8 flex items-center justify-center '>
                         <a
                             href="/Fathimathul Raifa NP_resume.pdf"
@@ -83,12 +88,16 @@ function LandingPage() {
 
 
                     </div>
-                </div>
+                </motion.div>
 
 
 
                 {/* image div */}
-                <div className=" order-1 md:order-2 flex items-center justify-center">
+                <motion.div 
+                initial={{ opacity: 0, x: 50, scale: 0.8 }} 
+                    animate={{ opacity: 1, x: 0, scale: 1 }}   
+                    transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
+                     className=" order-1 md:order-2 flex items-center justify-center">
                     <div className="relative md:w-[400px] w-[300px] h-[300px] md:h-[400px] rounded-full md:-mt-20">
 
                         <div className="absolute inset-0 rounded-full p-[3px] animate-glow-gradient">
@@ -103,7 +112,7 @@ function LandingPage() {
                             />
                         </div>
                     </div>
-                </div>
+                </motion.div>
 
 
             </div>
