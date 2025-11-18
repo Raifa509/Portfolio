@@ -39,7 +39,7 @@ function LandingPage() {
 
                     <div className='px-5 py-2 mt-8 flex items-center justify-center '>
                         <a
-                            href="/Fathimathul Raifa NP_resume.pdf"
+                            href="/Fathimathul Raifa_resume.pdf"
                             download
                             className="tektur-font
                                     relative inline-flex items-center justify-center

@@ -7,26 +7,56 @@ import { motion } from "framer-motion";
 export default function Contact() {
   const buttonVariants = {
     hidden: { opacity: 0, y: 30 },
-    visible: (i) => ({ opacity: 1, y: 0, transition: { delay: i * 0.2 } }),
+    visible: (i) => ({ opacity: 1, y: 0, transition: { delay: i * 0.2, duration: 0.8 } }),
   };
+
+  const buttons = [
+    {
+      icon: faEnvelope,
+      text: "Email Me",
+      href: "mailto:fathimathulraifanp@gmail.com",
+      className: "bg-gradient-to-r from-pink-500 to-purple-600 hover:from-purple-600 hover:to-pink-500",
+    },
+    {
+      icon: faLinkedin,
+      text: "LinkedIn",
+      href: "https://www.linkedin.com/in/fathimathulraifa-np",
+      className: "bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-indigo-600 hover:to-blue-500",
+    },
+    {
+      icon: faGithub,
+      text: "GitHub",
+      href: "https://github.com/Raifa509",
+      className: "bg-gradient-to-r from-gray-700 to-gray-900 hover:from-gray-900 hover:to-gray-700",
+    },
+  ];
 
   return (
     <section id="contact" className="bg-gray-950 md:py-32 px-6 md:px-40">
-      <motion.h2 initial={{opacity:0}} animate={{opacity:100}} transition={{duration:2}} className="text-4xl md:text-5xl font-extrabold text-center mb-10 bg-clip-text text-transparent bg-linear-to-r from-cyan-400 via-blue-400 to-cyan-200">
+      {/* Heading */}
+      <motion.h2
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        className="text-4xl md:text-5xl font-extrabold text-center mb-10 bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-blue-400 to-cyan-200"
+      >
         Let’s Connect
       </motion.h2>
 
-      <motion.p initial={{opacity:0}} animate={{opacity:100}} transition={{duration:2}}  className="text-gray-300 text-center max-w-2xl mx-auto mb-16 text-lg md:text-xl">
-        I’m open to collaborating on projects, discussing ideas, or just connecting professionally. Reach out via email, phone, or connect on LinkedIn or GitHub.
+      {/* Description */}
+      <motion.p
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 0.3 }}
+        className="text-gray-300 text-center max-w-2xl mx-auto mb-16 text-lg md:text-xl"
+      >
+        I’m open to collaborating on projects, discussing ideas, or just connecting professionally.
+        Reach out via email, phone, or connect on LinkedIn or GitHub.
       </motion.p>
 
       {/* Buttons */}
-      <div className="flex flex-col sm:flex-row justify-center items-center gap-6 mb-8">
-        {[
-          { icon: faEnvelope, text: "Email Me", href: "mailto:fathimathulraifanp@gmail.com", from: "pink-500", to: "purple-600" },
-          { icon: faLinkedin, text: "LinkedIn", href: "https://www.linkedin.com/in/fathimathulraifa-np", from: "blue-500", to: "indigo-600" },
-          { icon: faGithub, text: "GitHub", href: "https://github.com/Raifa509", from: "gray-700", to: "gray-900" },
-        ].map((btn, index) => (
+      <div className="flex flex-col sm:flex-row justify-center items-center gap-6 mb-12">
+        {buttons.map((btn, index) => (
           <motion.a
             key={index}
             custom={index}
@@ -37,9 +67,10 @@ export default function Contact() {
             href={btn.href}
             target="_blank"
             rel="noopener noreferrer"
-            className={`flex items-center justify-center px-8 py-3 rounded-xl bg-linear-to-r from-${btn.from} to-${btn.to} hover:from-${btn.to} hover:to-${btn.from} text-white font-semibold shadow-lg transition-transform transform hover:scale-105`}
+            className={`flex items-center justify-center px-8 py-3 rounded-xl text-white font-semibold shadow-lg transition-transform transform hover:scale-105 ${btn.className}`}
           >
-            <FontAwesomeIcon icon={btn.icon} className="mr-2" /> {btn.text}
+            <FontAwesomeIcon icon={btn.icon} className="mr-2" />
+            {btn.text}
           </motion.a>
         ))}
       </div>

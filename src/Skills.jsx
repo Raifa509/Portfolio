@@ -10,7 +10,7 @@ function Skills() {
     { src: "js.png", alt: "JavaScript" },
     { src: "ts.png", alt: "Typescript" },
     { src: "react.png", alt: "React" },
-    { src: "https://brandlogos.net/wp-content/uploads/2025/04/angular_icon-logo_brandlogos.net_jn7wi-512x542.png", alt: "Angular" },
+    { src: "angular.webp", alt: "Angular" },
     { src: "tailwind.png", alt: "Tailwind CSS" },
     { src: "material.png", alt: "Material UI" },
     { src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqf-Kqyd8dSvhhufDguf9CsTZStGVsoSQ5dg&s", alt: "Bootstrap" },
@@ -20,7 +20,7 @@ function Skills() {
 
     { src: "https://d2lgmzy8vjj79z.cloudfront.net/mongodb.svg", alt: "MongoDB" },
     { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Git_icon.svg/2048px-Git_icon.svg.png", alt: "Git" },
-    { src: "https://images.icon-icons.com/3053/PNG/512/postman_macos_bigsur_icon_189815.png", alt: "Postman" }
+    { src: "postman.png", alt: "Postman" }
   ];
 
   return (
