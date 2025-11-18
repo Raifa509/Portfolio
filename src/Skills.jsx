@@ -22,10 +22,10 @@ function Skills() {
   ];
 
   return (
-    <div id="skills" className="min-h-screen bg-gray-950 w-full px-6 md:px-40 py-16">
+    <div id="skills" className="min-h-screen bg-gray-950 w-full px-6 md:px-40 py-15">
 
       {/* Heading */}
-      <h2 className="text-4xl md:text-5xl font-bold text-cyan-300 tektur-font text-center mb-16 tracking-wide">
+      <h2 className="text-3xl md:text-4xl font-bold text-cyan-300 tektur-font text-center mb-16 tracking-wide">
         Skills
       </h2>
 

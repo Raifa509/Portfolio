@@ -1,4 +1,4 @@
-import { faBars, faCode, faEnvelope, faFolderOpen, faHome, faInfoCircle, faPaperPlane, faPhone } from '@fortawesome/free-solid-svg-icons'
+import { faBars, faBriefcase, faCode, faEnvelope, faFolderOpen, faHome, faInfoCircle, faPaperPlane, faPhone } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React, { useState } from 'react'
 
@@ -37,6 +37,13 @@ function Header() {
         ><FontAwesomeIcon icon={faInfoCircle} className='me-2' />
           About
         </a>
+             <a
+          href="#skills"
+          className="text-white text-xl font-semibold transition-transform duration-300 transform hover:scale-105 hover:text-cyan-300"
+          onClick={() => setModal(false)}
+        ><FontAwesomeIcon icon={faCode} className='me-2' />
+          Skills
+        </a>
         <a
           href="#projects"
           className="text-white text-xl font-semibold transition-transform duration-300 transform hover:scale-105 hover:text-cyan-300"
@@ -44,14 +51,14 @@ function Header() {
         ><FontAwesomeIcon icon={faFolderOpen} className='me-2' />
           Projects
         </a>
-        <a
-          href="#skills"
+   
+             <a
+          href="#experience"
           className="text-white text-xl font-semibold transition-transform duration-300 transform hover:scale-105 hover:text-cyan-300"
           onClick={() => setModal(false)}
-        ><FontAwesomeIcon icon={faCode} className='me-2' />
-          Skills
+        ><FontAwesomeIcon icon={faBriefcase} className='me-2' />
+          Experience
         </a>
-
         <a
           href="#contact"
           className="text-white text-xl font-semibold transition-transform duration-300 transform hover:scale-105 hover:text-cyan-300"

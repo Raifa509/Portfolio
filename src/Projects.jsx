@@ -72,12 +72,12 @@ const projects = [
 
 export default function ProjectShowcase() {
     return (
-        <section id="projects" className="bg-gray-950 py-20 px-6 md:px-40">
-            <h2 className="text-4xl md:text-5xl font-bold text-cyan-400 text-center mb-16 tektur-font">
+        <section id="projects" className="bg-gray-950 py-5 px-6 md:px-40">
+            <h2 className="text-3xl md:text-4xl font-bold text-cyan-400 text-center mb-16 tektur-font">
                 My Projects
             </h2>
 
-            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 ">
+            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-5 pt-6">
                 {projects.map((project, idx) => (
                     <div
                         key={idx}
