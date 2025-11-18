@@ -22,7 +22,7 @@ function Skills() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-950 w-full px-6 md:px-40 py-16">
+    <div id="skills" className="min-h-screen bg-gray-950 w-full px-6 md:px-40 py-16">
 
       {/* Heading */}
       <h2 className="text-4xl md:text-5xl font-bold text-cyan-300 tektur-font text-center mb-16 tracking-wide">
@@ -35,7 +35,7 @@ function Skills() {
           {skills.map((skill, index) => (
             <div
               key={index}
-              className="transition-all duration-300 hover:drop-shadow-[0_0_15px_rgba(56,189,248,0.5)] opacity-0 animate-fadeUp"
+              className="transition-all duration-300  opacity-0 animate-fadeUp"
               style={{ animationDelay: `${index * 0.08}s` }}
             >
               <TiltedCard

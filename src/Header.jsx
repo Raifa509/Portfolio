@@ -51,7 +51,7 @@ function Header() {
         ><FontAwesomeIcon icon={faCode} className='me-2' />
           Skills
         </a>
-        
+
         <a
           href="#contact"
           className="text-white text-xl font-semibold transition-transform duration-300 transform hover:scale-105 hover:text-cyan-300"

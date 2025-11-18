@@ -3,6 +3,7 @@ import './App.css'
 import Particles from './Components/Particles';
 import Header from './Header';
 import LandingPage from './LandingPage';
+import Projects from './Projects';
 import Skills from './Skills';
 
 
@@ -35,6 +36,7 @@ function App() {
       </div>
       <About />
       <Skills/>
+      <Projects/>
 
     </>
   )
