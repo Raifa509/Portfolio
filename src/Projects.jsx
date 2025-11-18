@@ -103,7 +103,7 @@ export default function ProjectShowcase() {
                                     href={project.github}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="flex items-center gap-1 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-blue-500 hover:to-cyan-500 text-white px-3 py-2 rounded-lg text-sm transition"
+                                    className="flex items-center gap-1 bg-linear-to-r from-cyan-500 to-blue-500 hover:from-blue-500 hover:to-cyan-500 text-white px-3 py-2 rounded-lg text-sm transition"
                                 >
                                     <FontAwesomeIcon icon={faGithub} /> GitHub
                                 </a>
@@ -111,7 +111,7 @@ export default function ProjectShowcase() {
                                     href={project.demo === "#" ? undefined : project.demo}
                                     target={project.demo === "#" ? undefined : "_blank"}
                                     rel="noopener noreferrer"
-                                    className={`flex items-center gap-1 bg-gradient-to-r from-green-400 to-teal-500 text-white px-3 py-2 rounded-lg text-sm transition ${project.demo === "#" ? "opacity-50 cursor-not-allowed" : "hover:from-teal-500 hover:to-green-400"}`}
+                                    className={`flex items-center gap-1 bg-linear-to-r from-green-400 to-teal-500 text-white px-3 py-2 rounded-lg text-sm transition ${project.demo === "#" ? "opacity-50 cursor-not-allowed" : "hover:from-teal-500 hover:to-green-400"}`}
                                 >
                                     <FontAwesomeIcon icon={faExternalLinkAlt} /> Live Demo
                                 </a>

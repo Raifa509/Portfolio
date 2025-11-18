@@ -1,8 +1,10 @@
 import About from './About';
 import './App.css'
 import Particles from './Components/Particles';
+import Contact from './Contact';
 import Education from './Education';
 import Experience from './Experience';
+import Footer from './Footer';
 import Header from './Header';
 import LandingPage from './LandingPage';
 import Projects from './Projects';
@@ -41,7 +43,8 @@ function App() {
       <Projects/>
       <Experience/>
       <Education/>
-
+      <Contact/>
+      <Footer/>
     </>
   )
 }
