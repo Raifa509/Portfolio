@@ -37,7 +37,7 @@ function Header() {
         ><FontAwesomeIcon icon={faInfoCircle} className='me-2' />
           About
         </a>
-             <a
+        <a
           href="#skills"
           className="text-white text-xl font-semibold transition-transform duration-300 transform hover:scale-105 hover:text-cyan-300"
           onClick={() => setModal(false)}
@@ -51,8 +51,8 @@ function Header() {
         ><FontAwesomeIcon icon={faFolderOpen} className='me-2' />
           Projects
         </a>
-   
-             <a
+
+        <a
           href="#experience"
           className="text-white text-xl font-semibold transition-transform duration-300 transform hover:scale-105 hover:text-cyan-300"
           onClick={() => setModal(false)}

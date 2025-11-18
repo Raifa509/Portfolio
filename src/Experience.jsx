@@ -40,12 +40,15 @@ export default function ScrollTimeline() {
   }, []);
 
   return (
-    <section id="experience" className="bg-gray-950 py-35 px-6 md:px-40">
-      <h2 className="text-4xl font-bold text-cyan-400 text-center mb-18">
+    <section id="experience" className="bg-gray-950 py-20 px-6 md:px-40">
+      <h2 className="text-3xl md:text-4xl font-bold text-cyan-400 text-center mb-16">
         Experience
       </h2>
 
-      <div className="relative before:absolute before:left-1/2 before:top-0 before:bottom-0 before:w-1 before:-translate-x-1/2 before:bg-cyan-500">
+      <div className="relative">
+        {/* Vertical timeline line */}
+        <div className="absolute left-1/2 top-0 w-1 bg-cyan-500 h-full -translate-x-1/2"></div>
+
         {experiences.map((exp, idx) => {
           const isLeft = idx % 2 === 0;
           return (
@@ -53,7 +56,7 @@ export default function ScrollTimeline() {
               key={idx}
               ref={(el) => (refs.current[idx] = el)}
               data-idx={idx}
-              className="mb-10 flex justify-center relative"
+              className="mb-10 flex justify-center w-full relative"
             >
               <div
                 className={`w-full md:w-1/2 px-4 transform transition-all duration-700 ${
@@ -63,11 +66,14 @@ export default function ScrollTimeline() {
                 } ${isLeft ? "md:mr-auto md:text-right" : "md:ml-auto md:text-left"}`}
               >
                 <div className="bg-gray-900/60 backdrop-blur-lg p-6 rounded-xl shadow-lg relative">
+                  {/* Timeline circle (hidden on small screens) */}
                   <span
-                    className={`absolute top-2 ${
-                      isLeft ? "-right-12px" : "left-[-12px]"
-                    } w-4 h-4 bg-cyan-400 rounded-full border-2 border-gray-950`}
+                    className={`hidden md:block absolute top-1/2 w-4 h-4 bg-cyan-400 rounded-full border-2 border-gray-950 -translate-y-1/2 ${
+                      isLeft ? "right-[-32px]" : "left-[-32px]"
+                    }`}
                   ></span>
+
+                  {/* Content */}
                   <h3 className="text-xl font-semibold text-white">{exp.role}</h3>
                   <p className="text-gray-300 flex items-center gap-2 mt-1">
                     <FaBuilding /> {exp.company}
