@@ -12,24 +12,25 @@ function About() {
   return (
     <div
       id="about"
-      className="min-h-screen bg-gray-950 md:pt-20 px-6 md:px-20 text-white flex flex-col items-center"
+      className="min-h-screen bg-gray-950 md:pt-20 sm:px-6 md:px-20 lg:px-40 text-white flex flex-col items-center"
     >
-      <div className="flex flex-col md:grid md:grid-cols-2 bg-gray-900/60 backdrop-blur-lg rounded-2xl shadow-[0_0_25px_rgba(56,189,248,0.25)] md:mx-32 p-10 gap-10 border border-cyan-500/10">
+      <div className="flex flex-col md:grid md:grid-cols-2 bg-gray-900/60 backdrop-blur-lg rounded-2xl shadow-[0_0_25px_rgba(56,189,248,0.25)] md:mx-32 p-6 md:p-10 gap-10 border border-cyan-500/10 w-full">
 
         {/* Image */}
         <motion.div
-          className="order-2 md:order-1 flex items-center justify-center mt-12 md:mt-0"
+          className="order-2 md:order-1 flex items-center justify-center mt-8 md:mt-0"
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 1, ease: "easeOut" }}
         >
-          <div className="relative h-64 w-64 md:h-80 md:w-80 border-2 border-cyan-300 rounded-2xl shadow-[0_0_20px_#22d3ee]">
-            <div className="absolute h-64 w-64 md:h-80 md:w-80 left-5 bottom-5 overflow-hidden rounded-2xl">
+          <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 border-2 border-cyan-300 rounded-2xl shadow-[0_0_20px_#22d3ee]">
+            {/* Offset inner image */}
+            <div className="absolute left-2 sm:left-3 md:left-5 bottom-2 sm:bottom-3 md:bottom-5 w-full h-full overflow-hidden rounded-2xl">
               <img
                 src="/Raifa.jpg"
                 alt="Raifa"
-                className="object-cover h-full w-full rounded-2xl opacity-95 hover:opacity-100 transition-all duration-300"
+                className="object-cover w-full h-full rounded-2xl opacity-95 hover:opacity-100 transition-all duration-300"
               />
             </div>
           </div>
@@ -71,18 +72,13 @@ function About() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
-            variants={{
-              visible: { transition: { staggerChildren: 0.2 } },
-            }}
+            variants={{ visible: { transition: { staggerChildren: 0.2 } } }}
           >
             {softSkills.map((skill, index) => (
               <motion.span
                 key={index}
                 className="px-4 py-2 bg-gray-800/80 text-cyan-300 font-medium rounded-full border border-cyan-500/30 shadow-[0_0_10px_rgba(56,189,248,0.3)] hover:scale-105 transition-all duration-300"
-                variants={{
-                  hidden: { opacity: 0, y: 10 },
-                  visible: { opacity: 1, y: 0 },
-                }}
+                variants={{ hidden: { opacity: 0, y: 10 }, visible: { opacity: 1, y: 0 } }}
               >
                 {skill}
               </motion.span>

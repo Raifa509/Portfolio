@@ -61,7 +61,7 @@ const projects = [
   },
 ];
 
-export default function ProjectShowcase() {
+export default function Projects() {
   const containerVariants = {
     hidden: {},
     visible: { transition: { staggerChildren: 0.1 } },

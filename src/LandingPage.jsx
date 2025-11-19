@@ -9,10 +9,10 @@ import { motion } from "framer-motion";
 function LandingPage() {
     return (
         <>
-            <div className="grid grid-cols-1 md:grid-cols-2 text-white md:min-h-screen mt-27 md:mt-0">
+            <div className="grid grid-cols-1 lg:grid-cols-2 text-white md:min-h-screen mt-45 md:mt-0">
                 <motion.div initial={{ opacity: 0, x: -100 }}
                     animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 2, ease: "easeOut" }} className="order-2 md:order-1 flex flex-col mt-10 md:mt-50 text-center text-white md:ms-32">
+                    transition={{ duration: 2, ease: "easeOut" }} className="order-2 lg:order-1 flex flex-col mt-15 lg:mt-50 text-center text-white lg:ms-32">
                     <h1 className="md:text-3xl text-2xl font-light tracking-wide text-gray-300 tektur-font">
                         Hi , I'm
                     </h1>
@@ -93,15 +93,15 @@ function LandingPage() {
 
 
                 {/* image div */}
-                <motion.div 
-                initial={{ opacity: 0, x: 50, scale: 0.8 }} 
-                    animate={{ opacity: 1, x: 0, scale: 1 }}   
+                <motion.div
+                    initial={{ opacity: 0, x: 50, scale: 0.8 }}
+                    animate={{ opacity: 1, x: 0, scale: 1 }}
                     transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
-                     className=" order-1 md:order-2 flex items-center justify-center">
-                    <div className="relative md:w-[400px] w-[300px] h-[300px] md:h-[400px] rounded-full md:-mt-20">
+                    className=" order-1 lg:order-2 flex items-center justify-center">
+                    <div className="relative w-40 h-40 sm:w-48 sm:h-48 md:w-96 md:h-96 rounded-full -mt-8 sm:-mt-12 md:-mt-20 mx-auto">
 
-                        <div className="absolute inset-0 rounded-full p-[3px] animate-glow-gradient">
-                            <div className="w-full h-full rounded-full bg-linear-to-br from-cyan-300 to-violet-400 blur-[6px] opacity-70"></div>
+                        <div className="absolute inset-0 rounded-full p-0.5 sm:p-[3px] animate-glow-gradient overflow-hidden">
+                            <div className="w-full h-full rounded-full bg-linear-to-br from-cyan-300 to-violet-400 blur-[6px] opacity-50 sm:opacity-70"></div>
                         </div>
                         {/* Image container */}
                         <div className="relative w-full h-full rounded-full overflow-hidden">
