@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 function LandingPage() {
     return (
         <>
-            <div className="grid grid-cols-1 lg:grid-cols-2 text-white md:min-h-screen mt-45 md:mt-0">
+            <div className="grid grid-cols-1 lg:grid-cols-2 text-white md:min-h-screen mt-30 md:mt-0">
                 <motion.div initial={{ opacity: 0, x: -100 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 2, ease: "easeOut" }} className="order-2 lg:order-1 flex flex-col mt-15 lg:mt-50 text-center text-white lg:ms-32">

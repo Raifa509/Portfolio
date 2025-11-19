@@ -32,7 +32,7 @@ export default function Contact() {
   ];
 
   return (
-    <section id="contact" className="bg-gray-950 md:py-32 px-6 md:px-40">
+    <section id="contact" className="bg-gray-950 py-20 md:py-32 px-6 md:px-40">
       {/* Heading */}
       <motion.h2
         initial={{ opacity: 0, y: 20 }}

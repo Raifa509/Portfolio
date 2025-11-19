@@ -21,7 +21,7 @@ function Skills() {
   ];
 
   return (
-    <section id="skills" className="bg-gray-950 w-full px-4 sm:px-6 md:px-20 lg:px-40 py-12">
+    <section id="skills" className="bg-gray-950 w-full px-4 sm:px-6 md:px-20 lg:px-40 md:py-12 pt-30 pb-10">
       {/* Heading */}
       <h2 className="text-3xl md:text-4xl font-bold text-cyan-300 tektur-font text-center mb-12 tracking-wide">
         Skills
