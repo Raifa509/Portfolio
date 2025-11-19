@@ -20,24 +20,42 @@ function Skills() {
     { src: "postman.png", alt: "Postman" }
   ];
 
+  // Parent container animation for stagger
+  const containerVariants = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.15, // stagger each skill
+      },
+    },
+  };
+
+  // Individual skill animation
+  const skillVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0, transition: { duration: 1.2, ease: "easeOut" } },
+  };
+
   return (
     <section id="skills" className="bg-gray-950 w-full px-4 sm:px-6 md:px-20 lg:px-40 md:py-12 pt-30 pb-10">
       {/* Heading */}
-      <h2 className="text-3xl md:text-4xl font-bold text-cyan-300 tektur-font text-center mb-12 tracking-wide">
+      <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-linear-to-r from-cyan-400 via-blue-400 to-cyan-200 tektur-font text-center mb-12 tracking-wide">
         Skills
       </h2>
 
-      <div className="backdrop-blur-xl bg-white/5 p-4 sm:p-6 md:p-8 lg:p-10 rounded-3xl shadow-xl shadow-cyan-500/10">
+      <motion.div
+        className="backdrop-blur-xl bg-white/5 p-4 sm:p-6 md:p-8 lg:p-10 rounded-3xl shadow-xl shadow-cyan-500/10"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+      >
         <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 sm:gap-6 md:gap-8 lg:gap-10 place-items-center">
-
           {skills.map((skill, index) => (
             <motion.div
               key={index}
-              className="transition-all duration-300 opacity-0 animate-fadeUp"
-              style={{ animationDelay: `${index * 0.08}s` }}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
+              variants={skillVariants}
+              className="flex justify-center items-center"
             >
               {/* TiltedCard only for md+ */}
               <div className="hidden md:block w-20 h-20 lg:w-28 lg:h-28">
@@ -65,9 +83,8 @@ function Skills() {
               </div>
             </motion.div>
           ))}
-
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

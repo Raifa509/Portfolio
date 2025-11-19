@@ -44,13 +44,14 @@ const projects = [
     status: "Completed",
   },
   {
-    title: "ToDo App",
-    description: "A Redux-powered ToDo app to manage tasks efficiently. Supports task creation, deletion, marking as complete, and filtering by status. Fully responsive and lightweight.",
-    image: "/todo.png",
-    github: "https://github.com/Raifa509/ToDo-Redux",
-    demo: "https://to-do-redux-beryl.vercel.app/",
+    title: "Frozzie Ice Cream UI",
+    description: "Frontend UI for an ice cream website built with React. Features a fully responsive layout, hover animations on products, and a clean, attractive design to showcase ice cream flavors and specials.",
+    image: "/ice.png",
+    github: "https://github.com/Raifa509/React-Frozzie",
+    demo: "https://frozzie-icecream-react.netlify.app/",
     status: "Completed",
-  },
+  }
+  ,
   {
     title: "Netflix-UI-Clone",
     description: "Frontend UI clone of Netflix homepage using HTML/CSS. Includes a responsive layout, carousels, and hover animations to replicate the Netflix look and feel.",
@@ -74,7 +75,7 @@ export default function Projects() {
 
   return (
     <section id="projects" className="bg-gray-950 py-12 px-6 md:px-40">
-      <h2 className="text-3xl md:text-4xl font-bold text-cyan-400 text-center mb-12">
+      <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-linear-to-r from-cyan-400 via-blue-400 to-cyan-200 text-center mb-12">
         My Projects
       </h2>
 
@@ -111,21 +112,21 @@ export default function Projects() {
                   href={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-1 px-3 py-2 rounded-lg text-sm text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-blue-500 hover:to-cyan-500 shadow-md transition-all"
+                  className="flex items-center gap-1 px-3 py-2 rounded-lg text-sm text-white bg-gradient-to-r from-gray-800 to-black shadow-lg hover:from-gray-700 hover:to-gray-900 transition-all"
                 >
-                  <FontAwesomeIcon icon={faGithub} /> GitHub
+                  <FontAwesomeIcon icon={faGithub} />
                 </a>
                 <a
                   href={project.demo === "#" ? undefined : project.demo}
                   target={project.demo === "#" ? undefined : "_blank"}
                   rel="noopener noreferrer"
-                  className={`flex items-center gap-1 px-3 py-2 rounded-lg text-sm text-white bg-gradient-to-r from-green-400 to-teal-500 transition-all shadow-md ${
-                    project.demo === "#" ? "opacity-50 cursor-not-allowed" : "hover:from-teal-500 hover:to-green-400"
-                  }`}
+                  className={`flex items-center gap-1 px-3 py-2 rounded-lg text-sm text-white bg-gradient-to-r from-black to-gray-800 shadow-lg transition-all ${project.demo === "#" ? "opacity-50 cursor-not-allowed" : "hover:from-yellow-500 hover:to-yellow-400"
+                    }`}
                 >
-                  <FontAwesomeIcon icon={faExternalLinkAlt} /> Live Demo
+                  <FontAwesomeIcon icon={faExternalLinkAlt} />
                 </a>
               </div>
+
             </div>
           </motion.div>
         ))}
@@ -156,26 +157,27 @@ export default function Projects() {
                   <h3 className="text-lg font-bold text-white mb-2">{project.title}</h3>
                   <p className="text-gray-300 mb-4">{project.description}</p>
 
-                  <div className="flex flex-wrap gap-3">
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-1 px-3 py-2 rounded-lg text-sm text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-blue-500 hover:to-cyan-500 shadow-md transition-all"
-                    >
-                      <FontAwesomeIcon icon={faGithub} />
-                    </a>
-                    <a
-                      href={project.demo === "#" ? undefined : project.demo}
-                      target={project.demo === "#" ? undefined : "_blank"}
-                      rel="noopener noreferrer"
-                      className={`flex items-center gap-1 px-3 py-2 rounded-lg text-sm text-white bg-gradient-to-r from-green-400 to-teal-500 transition-all shadow-md ${
-                        project.demo === "#" ? "opacity-50 cursor-not-allowed" : "hover:from-teal-500 hover:to-green-400"
-                      }`}
-                    >
-                      <FontAwesomeIcon icon={faExternalLinkAlt} />
-                    </a>
-                  </div>
+                 <div className="flex flex-wrap gap-3">
+  <a
+    href={project.github}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center gap-1 px-3 py-2 rounded-lg text-sm text-white bg-gradient-to-r from-gray-800 to-black shadow-lg hover:from-gray-700 hover:to-gray-900 transition-all"
+  >
+    <FontAwesomeIcon icon={faGithub} />
+  </a>
+  <a
+    href={project.demo === "#" ? undefined : project.demo}
+    target={project.demo === "#" ? undefined : "_blank"}
+    rel="noopener noreferrer"
+    className={`flex items-center gap-1 px-3 py-2 rounded-lg text-sm text-white bg-gradient-to-r from-black to-gray-800 shadow-lg transition-all ${
+      project.demo === "#" ? "opacity-50 cursor-not-allowed" : "hover:from-yellow-500 hover:to-yellow-400"
+    }`}
+  >
+    <FontAwesomeIcon icon={faExternalLinkAlt} />
+  </a>
+</div>
+
                 </div>
               </motion.div>
             </SwiperSlide>

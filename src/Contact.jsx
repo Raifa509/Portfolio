@@ -15,13 +15,13 @@ export default function Contact() {
       icon: faEnvelope,
       text: "Email Me",
       href: "mailto:fathimathulraifanp@gmail.com",
-      className: "bg-gradient-to-r from-pink-500 to-purple-600 hover:from-purple-600 hover:to-pink-500",
+      className: "bg-gradient-to-r from-gray-700 to-gray-900 hover:from-gray-900 hover:to-gray-700",
     },
     {
       icon: faLinkedin,
       text: "LinkedIn",
       href: "https://www.linkedin.com/in/fathimathulraifa-np",
-      className: "bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-indigo-600 hover:to-blue-500",
+      className: "bg-gradient-to-r from-gray-700 to-gray-900 hover:from-gray-900 hover:to-gray-700",
     },
     {
       icon: faGithub,
@@ -38,7 +38,7 @@ export default function Contact() {
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-        className="text-4xl md:text-5xl font-extrabold text-center mb-10 bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-blue-400 to-cyan-200"
+        className="text-4xl md:text-5xl font-extrabold text-center mb-10 bg-clip-text text-transparent bg-linear-to-r from-cyan-400 via-blue-400 to-cyan-200"
       >
         Let’s Connect
       </motion.h2>
@@ -55,7 +55,7 @@ export default function Contact() {
       </motion.p>
 
       {/* Buttons */}
-      <div className="flex flex-col sm:flex-row justify-center items-center gap-6 mb-12">
+      <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mb-12 w-full max-w-md mx-auto">
         {buttons.map((btn, index) => (
           <motion.a
             key={index}
@@ -67,13 +67,14 @@ export default function Contact() {
             href={btn.href}
             target="_blank"
             rel="noopener noreferrer"
-            className={`flex items-center justify-center px-8 py-3 rounded-xl text-white font-semibold shadow-lg transition-transform transform hover:scale-105 ${btn.className}`}
+            className={`flex-1 min-w-[140px] flex items-center justify-center px-4 py-3 rounded-xl text-white font-semibold shadow-lg transition-transform transform hover:scale-105 ${btn.className}`}
           >
             <FontAwesomeIcon icon={btn.icon} className="mr-2" />
             {btn.text}
           </motion.a>
         ))}
       </div>
+
 
       {/* Contact Info */}
       <div className="flex flex-col md:flex-row justify-center items-center gap-5 text-center">
@@ -98,5 +99,6 @@ export default function Contact() {
         </motion.div>
       </div>
     </section>
+
   );
 }

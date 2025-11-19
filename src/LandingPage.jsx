@@ -3,7 +3,7 @@ import TextType from './Components/TextType'
 import GradientText from './Components/GradientText'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
-import { faDownload, faEnvelope, faEnvelopeOpen } from '@fortawesome/free-solid-svg-icons'
+import { faArrowRight, faDownload, faEnvelope, faEnvelopeOpen } from '@fortawesome/free-solid-svg-icons'
 import { motion } from "framer-motion";
 
 function LandingPage() {
@@ -37,57 +37,47 @@ function LandingPage() {
                     </div>
 
 
-                    <div className='px-5 py-2 mt-8 flex items-center justify-center '>
+                    <div className='px-5 py-2 mt-4 flex flex-col sm:flex-row items-center sm:items-center justify-center space-y-3 sm:space-y-0 sm:space-x-6'>
+                        {/* Resume link */}
                         <a
                             href="/Fathimathul Raifa_resume.pdf"
                             download
-                            className="tektur-font
-                                    relative inline-flex items-center justify-center
-                                    px-5 py-2.5 rounded-lg font-semibold
-                                    text-white tracking-wide
-                                    bg-linear-to-r from-indigo-700 to-cyan-400 
-                                    shadow-[0_0_12px_rgba(139,92,246,0.4)]
-                                    hover:shadow-[0_0_16px_rgba(139,92,246,0.6)]
-                                    transition-all duration-300 hover:scale-110 
-                                    cursor-pointer me-4"
+                            className="tektur-font text-cyan-400 text-lg font-semibold flex items-center space-x-2 hover:underline hover:text-cyan-300 transition-colors duration-300"
                         >
-                            Resume
-                            <FontAwesomeIcon icon={faDownload} className="ml-2" />
+                            <span>Resume</span>
+                            <FontAwesomeIcon icon={faArrowRight} className='-ms-2'/>
                         </a>
 
-                        <div className="flex space-x-4 text-violet-200 mt-4 hover:">
+                        {/* Social icons */}
+                        <div className="flex space-x-3 text-violet-200 justify-center">
                             <a
                                 href="https://www.linkedin.com/in/fathimathulraifa-np"
                                 target="_blank"
-                                rel="noopener noreferrer"  // security best practice
+                                rel="noopener noreferrer"
+                                className="text-2xl text-cyan-300"
                             >
-                                <FontAwesomeIcon
-                                    icon={faLinkedin}
-                                    className="text-2xl text-cyan-300 animate-bounce-delay-1 transition-all duration-300 hover:drop-shadow-[0_0_10px_#15cde6] hover:text-cyan-400"
-                                />
+                                <FontAwesomeIcon icon={faLinkedin} />
                             </a>
+
                             <a
                                 href="https://github.com/Raifa509"
                                 target="_blank"
-                                rel="noopener noreferrer"  // security best practice
+                                rel="noopener noreferrer"
+                                className="text-2xl text-cyan-300"
                             >
-                                <FontAwesomeIcon
-                                    icon={faGithub}
-                                    className="text-2xl text-cyan-300 animate-bounce-delay-2 transition-all duration-300 hover:drop-shadow-[0_0_10px_#15cde6]"
-                                />
+                                <FontAwesomeIcon icon={faGithub} />
                             </a>
 
-                            <a href="mailto:fathimathulraifanp@gmail.com">
-                                <FontAwesomeIcon
-                                    icon={faEnvelope}
-                                    className="text-2xl text-cyan-300 animate-bounce-delay-3 transition-all duration-300 hover:drop-shadow-[0_0_10px_#15cde6] hover:text-cyan-400"
-                                />
+                            <a
+                                href="mailto:fathimathulraifanp@gmail.com"
+                                className="text-2xl text-cyan-300"
+                            >
+                                <FontAwesomeIcon icon={faEnvelope} />
                             </a>
                         </div>
-
-
-
                     </div>
+
+
                 </motion.div>
 
 

@@ -111,29 +111,20 @@ html {
   animation: gradient linear infinite;
 }
 
-@keyframes icon-bounce {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
+/* Slower bounce animation */
+@keyframes slow-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); } /* smaller movement */
 }
 
-.animate-bounce-delay-1 {
-  animation: icon-bounce 3s ease-in-out infinite;
-  animation-delay: 0s;
+.animate-slow-bounce {
+  animation: slow-bounce 2.7s ease-in-out infinite;
 }
 
-.animate-bounce-delay-2 {
-  animation: icon-bounce 3s ease-in-out infinite;
-  animation-delay: 0.4s;
-}
+.animate-slow-bounce-delay-1 { animation-delay: 0s; }
+.animate-slow-bounce-delay-2 { animation-delay: 0.5s; }
+.animate-slow-bounce-delay-3 { animation-delay: 1s; }
 
-.animate-bounce-delay-3 {
-  animation: icon-bounce 3s ease-in-out infinite;
-  animation-delay: 0.8s;
-}
 /* skills */
 .tilted-card-figure {
   position: relative;

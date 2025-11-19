@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 export default function EducationSection() {
   return (
     <section className="bg-gray-950 py-10 px-6 md:px-40">
-      <h2 className="text-3xl md:text-4xl font-bold text-cyan-400 text-center mb-12">
+      <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-linear-to-r from-cyan-400 via-blue-400 to-cyan-200 text-center mb-12">
         Education
       </h2>
 
