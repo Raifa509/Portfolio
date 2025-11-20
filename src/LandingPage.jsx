@@ -83,26 +83,28 @@ function LandingPage() {
 
 
                 {/* image div */}
-                <motion.div
-                    initial={{ opacity: 0, x: 50, scale: 0.8 }}
-                    animate={{ opacity: 1, x: 0, scale: 1 }}
-                    transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
-                    className=" order-1 lg:order-2 flex items-center justify-center">
-                    <div className="relative w-40 h-40 sm:w-48 sm:h-48 md:w-96 md:h-96 rounded-full -mt-8 sm:-mt-12 md:-mt-20 mx-auto">
+               <motion.div
+  initial={{ opacity: 0, x: 50, scale: 0.8 }}
+  animate={{ opacity: 1, x: 0, scale: 1 }}
+  transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
+  className="order-1 lg:order-2 flex items-center justify-center"
+>
+  <div className="relative w-40 h-40 sm:w-48 sm:h-48 md:w-96 md:h-96 -mt-8 sm:-mt-12 md:-mt-20 mx-auto">
+    
+    {/* Cyan glow */}
+    <div className="absolute -inset-4 rounded-full bg-cyan-400 opacity-30 blur-lg"></div>
 
-                        <div className="absolute inset-0 rounded-full p-0.5 sm:p-[3px] animate-glow-gradient overflow-hidden">
-                            <div className="w-full h-full rounded-full bg-linear-to-br from-cyan-300 to-violet-400 blur-[6px] opacity-50 sm:opacity-70"></div>
-                        </div>
-                        {/* Image container */}
-                        <div className="relative w-full h-full rounded-full overflow-hidden">
-                            <img
-                                className="w-full h-full object-cover object-top scale-100"
-                                src="avatar.png"
-                                alt="Raifa"
-                            />
-                        </div>
-                    </div>
-                </motion.div>
+    {/* Image container */}
+    <div className="relative w-full h-full rounded-full overflow-hidden">
+      <img
+        className="w-full h-full object-cover object-top"
+        src="Raifa.jpg"
+        alt="Raifa"
+      />
+    </div>
+  </div>
+</motion.div>
+
 
 
             </div>
